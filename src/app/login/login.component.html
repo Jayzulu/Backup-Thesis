@@ -1,20 +1,20 @@
 <section class="vh-100">
   <div class="container h-100 w-25">
     <div class="">
-      <!-- Logo Section -->
-      <!-- <div class="col image-col">
-        <img src="hau.ico" alt="Holy Angel University Logo" class="img-fluid">
-      </div> -->
-      <!-- Form Section -->
-      <div class=" form-col bg-white bg-opacity-50">
-        <!-- Angular Conditional Rendering -->
+      <div class="form-col bg-white bg-opacity-50">
         <div *ngIf="isLoginView">
-          <form (ngSubmit)="homepage()" class="">
+          <form (ngSubmit)="login()" class=""> <!-- ✅ FIXED -->
             <div class="d-flex justify-content-center px-5 mx-2">
                 <img src="hau.ico" alt="Holy Angel University Logo" class="img-fluid" style="width: 35%;">
                 <h1 class="text-center my-auto">Human Resource <br> Management Office</h1>
             </div>
             <hr class="text-dark">
+
+            <!-- Verification Message -->
+            <div *ngIf="message" class="verification-message" [ngClass]="messageType">
+              {{ message }}
+            </div>
+
             <!-- Email Input -->
             <div class="form-group">
               <input
@@ -44,6 +44,13 @@
                 [ngClass]="passwordFieldType === 'password' ? 'fa-eye' : 'fa-eye-slash'"
                 (click)="togglePasswordVisibility()"
               ></i>
+            </div>
+
+            <!-- Resend Verification Button -->
+            <div *ngIf="showResendButton" class="text-center mb-2">
+              <button type="button" class="btn-link" (click)="resendVerification()">
+                Resend Verification Email
+              </button>
             </div>
 
             <!-- Login Button and Forgot Password Link -->
