@@ -36,7 +36,7 @@ export class DepartmentService {
   } 
   getSOCEmployees(): Observable<any[]> {
     return this.firestore
-      .collection('employees', ref => ref.where('department', '==', 'School of Computing (SOC)'))
+      .collection('employees', ref => ref.where('department', '==', 'School Of Computing (SOC)'))
       .valueChanges();
   } 
   getSEDEmployees(): Observable<any[]> {
