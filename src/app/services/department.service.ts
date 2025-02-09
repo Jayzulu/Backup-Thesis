@@ -21,7 +21,7 @@ export class DepartmentService {
   } 
   getSEAEmployees(): Observable<any[]> {
     return this.firestore
-      .collection('employees', ref => ref.where('department', '==', 'School of Engineering and Architecture (SEA)'))
+      .collection('employees', ref => ref.where('department', '==', 'School Of Engineering and Architecture (SEA)'))
       .valueChanges();
   } 
   getSASEmployees(): Observable<any[]> {
@@ -31,7 +31,7 @@ export class DepartmentService {
   } 
   getSHTMEmployees(): Observable<any[]> {
     return this.firestore
-      .collection('employees', ref => ref.where('department', '==', 'School of Hospitality and Tourism Management (SHTM)'))
+      .collection('employees', ref => ref.where('department', '==', 'School Of Hospitality and Tourism Management (SHTM)'))
       .valueChanges();
   } 
   getSOCEmployees(): Observable<any[]> {
@@ -41,7 +41,7 @@ export class DepartmentService {
   } 
   getSEDEmployees(): Observable<any[]> {
     return this.firestore
-      .collection('employees', ref => ref.where('department', '==', 'School of Education (SED)'))
+      .collection('employees', ref => ref.where('department', '==', 'School Of Education (SED)'))
       .valueChanges();
   } 
   getSNAMSEmployees(): Observable<any[]> {
