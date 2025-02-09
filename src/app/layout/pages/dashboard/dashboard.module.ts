@@ -13,6 +13,7 @@ import { OffboardComponent } from './offboard/offboard.component';
 import { OffboardingReportComponent } from './offboarding-report/offboarding-report.component';
 import { OnboardComponent } from './onboard/onboard.component';
 import { OnboardingReportComponent } from './onboarding-report/onboarding-report.component';
+import { UpdateInfoComponent } from './update-info/update-info.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { OnboardingReportComponent } from './onboarding-report/onboarding-report
     OnboardingReportComponent,
     OffboardingReportComponent,
     AuditLogsComponent,
+    UpdateInfoComponent,
   ],
   imports: [
     CommonModule,

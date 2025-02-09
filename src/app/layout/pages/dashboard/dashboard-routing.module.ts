@@ -7,12 +7,14 @@ import { DistributionComponent } from './distribution/distribution.component';
 import { OnboardingReportComponent } from './onboarding-report/onboarding-report.component';
 import { OffboardingReportComponent } from './offboarding-report/offboarding-report.component';
 import { AuditLogsComponent } from './audit-logs/audit-logs.component';
+import { UpdateInfoComponent } from './update-info/update-info.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'distribution', pathMatch: 'full'},
   {path: 'onboard', component: OnboardComponent},
   {path: 'offboard', component: OffboardComponent},
   {path: 'employee-info', component: EmployeeInfoComponent},
+  {path: 'update-info', component: UpdateInfoComponent},
   {path: 'onboarding-report', component: OnboardingReportComponent},
   {path: 'offboarding-report', component: OffboardingReportComponent},
   {path: 'audit-logs', component: AuditLogsComponent},
