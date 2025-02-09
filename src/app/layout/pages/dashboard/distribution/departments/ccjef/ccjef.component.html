@@ -13,40 +13,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Juan T. Pedro</td>
-                    <td>Probation</td>
-                    <td>Orientation</td>
-                    <td>Contract</td>
-                    <td>Yes</td>
-                </tr>
-                <tr>
-                    <td>Juan A. Salasar</td>
-                    <td>Full-time</td>
-                    <td>Orientation</td>
-                    <td>Contract</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>Jepoy D. Dizon</td>
-                    <td>Full-time</td>
-                    <td>Orientation</td>
-                    <td>Contract</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>Marie C. Tes</td>
-                    <td>Probation</td>
-                    <td>Orientation</td>
-                    <td>Contract</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>Kabataan A. Uleym</td>
-                    <td>Criminology</td>
-                    <td>Orientation</td>
-                    <td>Contract</td>
-                    <td>No</td>
+                <tr  *ngFor="let employee of filteredEmployees">
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.employmentType }}</td>
+                    <td>{{ employee.completedTasks }}</td>
+                    <td>{{ employee.pendingTasks }}</td>
                 </tr>
             </tbody>
         </table>
